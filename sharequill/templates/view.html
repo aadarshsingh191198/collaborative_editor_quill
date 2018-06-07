@@ -1,0 +1,23 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'article-view.css'%}">
+        <link href="{% static 'quill.snow.css'%}" rel="stylesheet">
+
+</head>
+<body>
+	<div id="toolbar"></div>
+    <div id="editor"></div>
+
+
+<!-- Remember to load the primary key using django -->
+	<script type="text/javascript">
+		var id = {{pk}}
+	</script>
+    <script src="{% static 'article-view.js'%}"></script>
+
+</body>
+</html>
