@@ -28,7 +28,7 @@ wss.on('connection', function(ws, req) {
   backend.listen(stream);
 });
 
-app.get('/edit/:id', function(req, res) {
+app.get('api/edit/:id', function(req, res) {
   var doc = connection.get('collaborative_community', req.params.id);
   doc.fetch(function(err) {
     if (err) throw err;
@@ -37,7 +37,8 @@ app.get('/edit/:id', function(req, res) {
       return;
     }
   });
-  res.render('index.ejs', {'id': req.params.id});
+  res.send('Document created');
+  // res.render('index.ejs', {'id': req.params.id});
 })
 
 app.get('/view/:id', function(req, res) {
