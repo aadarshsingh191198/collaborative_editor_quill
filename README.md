@@ -3,10 +3,13 @@
 This repository contains a django project that embodies a collaborative quilljs editor.
 
 Steps to run the project:
-1. Creation of virtualenv
+1. Install dependencies
 ```
-virtualenv venv -p  python3
-pip3 install django==1.11.7
+git clone https://github.com/aadarshsingh191198/collaborative_editor_quill.git
+virtualenv collabquill -p python3
+source collabquill/bin/activate
+cd collaborative_editor_quill
+pip install -r requirements.txt
 ```
 
 2.Installing and initialising mongodb
@@ -24,5 +27,5 @@ npm run build && npm start
 
 4.Initialising the django server
 ```
-python manage.py runserver 4000
+python manage.py runserver 0.0.0.0:4000
 ```
