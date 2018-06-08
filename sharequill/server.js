@@ -28,7 +28,7 @@ wss.on('connection', function(ws, req) {
   backend.listen(stream);
 });
 
-app.get('api/edit/:id', function(req, res) {
+app.get('/api/edit/:id', function(req, res) {
   var doc = connection.get('collaborative_community', req.params.id);
   doc.fetch(function(err) {
     if (err) throw err;
