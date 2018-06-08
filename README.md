@@ -19,7 +19,7 @@ sudo apt-get install -y mongodb-org
 
 3. Initialising the node server
 ```
-npm start
+npm run build && npm start
 ```
 
 4.Initialising the django server
